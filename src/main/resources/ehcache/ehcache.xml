@@ -1,0 +1,6 @@
+<ehcache>
+
+	<cache name="avengers" maxBytesLocalHeap="50m" timeToLiveSeconds="100">
+	</cache>
+
+</ehcache>
