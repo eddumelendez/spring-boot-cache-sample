@@ -63,6 +63,12 @@ SPRING_PROFILES_ACTIVE=jcache gradlew bootRun
 
 * Redis
 
+Redis instance is needed:
+
+```
+docker run --name redis -d redis
+```
+
 maven:
 ```
 mvnw spring-boot:run -Dspring.profiles.active=redis
