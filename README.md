@@ -4,42 +4,42 @@ spring-boot-cache
 * Generic
 
 ```
-mvn spring-boot:run
+mvnw spring-boot:run
 ```
 
 * EhCache
 
 ```
-mvn spring-boot:run -Dspring.profiles.active=ehcache
+mvnw spring-boot:run -Dspring.profiles.active=ehcache
 ```
 
 * Guava
 
 ```
-mvn spring-boot:run -Dspring.profiles.active=guava
+mvnw spring-boot:run -Dspring.profiles.active=guava
 ```
 
 * Hazelcast
 
 ```
-mvn spring-boot:run -Dspring.profiles.active=hazelcast
+mvnw spring-boot:run -Dspring.profiles.active=hazelcast
 ```
 
 * JCache
 
 ```
-mvn spring-boot:run -Dspring.profiles.active=jcache
+mvnw spring-boot:run -Dspring.profiles.active=jcache
 ```
 
 * Redis
 
 ```
-mvn spring-boot:run -Dspring.profiles.active=redis
+mvnw spring-boot:run -Dspring.profiles.active=redis
 ```
 
 * Simple
 
 ```
-mvn spring-boot:run -Dspring.profiles.active=simple
+mvnw spring-boot:run -Dspring.profiles.active=simple
 ```
 
