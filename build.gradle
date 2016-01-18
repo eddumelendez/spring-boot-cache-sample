@@ -42,5 +42,8 @@ sourceSets {
 task integrationTest(type: Test) {
     description = 'Runs the integration tests.'
     group = 'verification'
-    println "No implemented yet"
+    testClassesDir = sourceSets.integrationTest.output.classesDir
+    classpath = sourceSets.integrationTest.runtimeClasspath
 }
+
+check.dependsOn integrationTest
