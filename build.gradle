@@ -29,3 +29,18 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-redis")
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }
+
+sourceSets {
+    integrationTest {
+        java.srcDir file('src/it/java')
+        resources.srcDir file('src/it/resources')
+        compileClasspath = sourceSets.main.output + configurations.testRuntime
+        runtimeClasspath = output + compileClasspath
+    }
+}
+
+task integrationTest(type: Test) {
+    description = 'Runs the integration tests.'
+    group = 'verification'
+    println "No implemented yet"
+}
