@@ -7,7 +7,7 @@ node {
     git 'https://github.com/eddumelendez/spring-boot-cache-sample.git'
 
     echo "Construyendo el proyecto con Gradle Wrapper"
-    sh './gradlew build -x test'
+    bat './gradlew build -x test'
 
     archive 'build/libs/*.jar'
 
@@ -15,7 +15,7 @@ node {
 
 stage 'test'
 node {
-    sh './gradlew clean test'
+    bat './gradlew clean test'
 
     step([$class: 'JUnitResultArchiver', testResults: '**/build/test-results/TEST-*.xml'])
 }
@@ -24,6 +24,6 @@ stage 'integration-test'
 node {
     def outcome = input message: 'Quieres ejecutar los test de integración?', parameters: [[$class: 'BooleanParameterDefinition', defaultValue: false, description: '', name: '']]
     if (outcome) {
-        sh './gradlew integrationTest'
+        bat './gradlew integrationTest'
     }
 }
